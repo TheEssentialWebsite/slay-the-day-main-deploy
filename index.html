@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slay The Day</title>
+    <meta name="description" content="Fun · Play · Let Go - Moments for everyday joy" />
+    <meta name="author" content="Slay The Day" />
+    
+    <!-- Prevent search engine indexing -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    
+    <!-- reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#A24BFF" />
+    <meta name="background-color" content="#faf9fb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Slay The Day" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/icon-256.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Slay The Day" />
+    <meta property="og:description" content="Fun · Play · Let Go - Moments for everyday joy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/icon-512.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/icon-512.png" />
+    <script type="module" crossorigin src="/assets/index-Cs_eBuB8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DAaNM8n_.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    
+    <!-- Apply dark theme by default -->
+    <script>
+      // Apply dark theme immediately to prevent flash
+      document.documentElement.classList.add('dark');
+      
+      // Check stored theme preference
+      try {
+        const stored = localStorage.getItem('slay-the-day-settings');
+        if (stored) {
+          const settings = JSON.parse(stored);
+          if (settings.theme === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else if (settings.theme === 'system') {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (!prefersDark) {
+              document.documentElement.classList.remove('dark');
+            }
+          }
+        }
+      } catch (e) {
+        // Keep dark theme as default if there's any error
+      }
+    </script>
+    
+    <!-- PWA Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

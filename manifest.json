@@ -1,0 +1,57 @@
+{
+  "name": "Slay The Day",
+  "short_name": "Slay The Day",
+  "description": "Fun · Play · Let Go - Moments for everyday joy",
+  "start_url": "/app",
+  "display": "standalone",
+  "background_color": "#faf9fb",
+  "theme_color": "#A24BFF",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-256.png", 
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512", 
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["lifestyle", "health", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Daily Card",
+      "short_name": "Daily",
+      "description": "Capture today's moments",
+      "url": "/app",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Prompt Deck",
+      "short_name": "Deck", 
+      "description": "Get nudges",
+      "url": "/deck",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Themed Decks",
+      "short_name": "Decks", 
+      "description": "Browse deck collections",
+      "url": "/decks",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
