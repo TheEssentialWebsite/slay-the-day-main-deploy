@@ -1,1 +1,0 @@
-const e=async()=>{if("serviceWorker"in navigator)try{const r=await navigator.serviceWorker.register("/sw.js");return console.log("SW registered: ",r),r}catch(r){console.log("SW registration failed: ",r)}};export{e as registerServiceWorker};

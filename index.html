@@ -13,19 +13,7 @@
     <!-- reCAPTCHA v3 Script -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LdKoesrAAAAAAW9k30VkCwovZnWp5G__y6vrOcp"></script>
 
-    <!-- PWA Meta Tags -->
-    <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#A24BFF" />
-    <meta name="background-color" content="#faf9fb" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Slay The Day" />
-    
-    <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" href="/icon-192.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
-    <link rel="apple-touch-icon" sizes="256x256" href="/icon-256.png" />
-    <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Slay The Day" />
@@ -36,8 +24,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="/icon-512.png" />
-    <script type="module" crossorigin src="/assets/index-MRLY5hIj.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Bka8X7D8.css">
+    <script type="module" crossorigin src="/assets/index-BYPbqSNc.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CesoI89_.css">
   </head>
 
   <body>
@@ -67,19 +55,5 @@
       }
     </script>
     
-    <!-- PWA Service Worker -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('SW registered: ', registration);
-            })
-            .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
-            });
-        });
-      }
-    </script>
   </body>
 </html>
