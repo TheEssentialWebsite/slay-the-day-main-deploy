@@ -1,2 +1,40 @@
-User-agent: *
+# Allow major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Block training bots (optional)
+User-agent: ClaudeBot
 Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Allow all others
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://slaytheday.fun/sitemap.xml
